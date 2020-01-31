@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <!--" main layout " -->
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:background="@drawable/main_back">
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="#fafafa"
+            android:layout_gravity="center"
+            android:background="@drawable/button_back1"
+            android:onClick="Login"
+            android:text="LogIn"
+            android:textSize="35dp" />
+
+        <Button
+            android:id="@+id/button_signup"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:textColor="#fafafa"
+            android:layout_gravity="center"
+            android:background="@drawable/button_back"
+            android:onClick="Register"
+            android:text="SignUp"
+            android:textSize="35dp" />
+
+    </LinearLayout>
+
+    <!--" admin_layout" -->
+
+    <LinearLayout
+        android:id="@+id/admin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:background="@drawable/admin_back">
+
+        <ImageView
+            android:id="@+id/admin_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/admin_logo" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:text="Users Scores"
+            android:gravity="center"/>
+
+        <ListView
+            android:id="@+id/records_view"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp">
+        </ListView>
+    </LinearLayout>
+
+    <!--" game layout " -->
+    <LinearLayout
+        android:id="@+id/game_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:background="@drawable/main_back">
+
+
+
+        <ImageButton
+            android:id="@+id/button_shape"
+            android:layout_width="165dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="420dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="Go_to_qus"
+            android:src="@drawable/genral_btn" />
+
+        <ImageButton
+            android:id="@+id/button_flag"
+            android:layout_width="165dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:onClick="Go_to_flags"
+            android:src="@drawable/flags_btn" />
+
+        <ImageButton
+            android:id="@+id/button_animal"
+            android:layout_width="165dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:onClick="Go_to_animals"
+            android:src="@drawable/animals_btn" />
+
+
+    </LinearLayout>
+
+    <!--" sign up layout " -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/SignUpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/login_back"
+        tools:context="com.example.trivia_game.RegisterActivity">
+
+        <ImageView
+            android:layout_width="350px"
+            android:layout_height="350px"
+            android:layout_gravity="center"
+            android:src="@drawable/signup_icon" />
+
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Email"
+            android:textColorHint="@color/cardview_light_background"
+            android:inputType="textEmailAddress"
+            />
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Password"
+            android:textColorHint="@color/cardview_light_background"
+            android:inputType="numberPassword"
+            />
+        <TextView
+            android:id="@+id/password_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="your password should be 6 or more digits"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="10sp" />
+
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="550px"
+            android:layout_height="wrap_content"
+            android:textColor="#fafafa"
+            android:layout_gravity="center"
+            android:background="@drawable/button_back1"
+            android:text="Sign Up"
+            android:layout_marginBottom="10dp"
+            android:textSize="28dp"
+            android:onClick="SignUp"/>
+        <TextView
+            android:id="@+id/loginTxtView"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Sign in Here"
+            android:textSize="20dp"
+            android:layout_marginBottom="45dp"
+            android:textColor="@color/cardview_light_background"
+            android:onClick="regtologin"/>
+    </LinearLayout>
+
+    <!--" login layout " -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:background="@drawable/login_back">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_icon" />
+
+        <EditText
+            android:id="@+id/login_email"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Email"
+            android:textColorHint="@color/cardview_light_background"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Password"
+            android:textColorHint="@color/cardview_light_background"
+            android:inputType="numberPassword"/>
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:textColor="#fafafa"
+            android:layout_gravity="center"
+            android:background="@drawable/button_back1"
+            android:text="Login In"
+            android:onClick="btnLogin"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/TVSignUp"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:text="New User? Register Here"
+            android:onClick="logtoreg"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!--" genral layout " -->
+    <LinearLayout
+        android:id="@+id/genral_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ingame_back"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:context=".Genral_Activity">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mixd Trivia"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/countLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Q1"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textColor="@color/cardview_light_background"
+            android:drawableLeft="@drawable/timer_icon"
+            android:layout_marginRight="10dp"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/questionImage"
+            android:layout_width="520dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/image_q1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+            <Button
+                android:id="@+id/answerBtn1"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:onClick="checkAnswer"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer1" />
+
+            <Button
+                android:id="@+id/answerBtn2"
+                android:layout_width="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="60dp"
+                android:onClick="checkAnswer"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answerBtn3"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:onClick="checkAnswer"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer3" />
+
+            <Button
+                android:id="@+id/answerBtn4"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:onClick="checkAnswer"
+                android:text="answer4" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--" flags layout " -->
+    <LinearLayout
+        android:id="@+id/flags_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ingame_back"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:context=".Flags_Activity">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flags Trivia"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/countLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Q1"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/timer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textColor="@color/cardview_light_background"
+            android:drawableLeft="@drawable/timer_icon"
+            android:layout_marginRight="10dp"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/questionImage1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/image_german" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answerBtn44"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:onClick="checkAnswer"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer4" />
+
+            <Button
+                android:id="@+id/answerBtn33"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:onClick="checkAnswer"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answerBtn22"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:onClick="checkAnswer"
+                android:text="answer2" />
+
+            <Button
+                android:id="@+id/answerBtn11"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/cardview_light_background"
+                android:background="@drawable/qbuton_back"
+                android:onClick="checkAnswer"
+                android:text="answer1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--" animals layout " -->
+    <LinearLayout
+        android:id="@+id/animals_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ingame_back"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:context=".Animals_Activity">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animal Trivia"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/countLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/cardview_light_background"
+            android:text="Q1"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/timer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textColor="@color/cardview_light_background"
+            android:drawableLeft="@drawable/timer_icon"
+            android:layout_marginRight="10dp"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/questionImage12"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/image_donkey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answerBtn222"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:onClick="checkAnswer"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer2" />
+
+            <Button
+                android:id="@+id/answerBtn111"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:onClick="checkAnswer"
+                android:text="answer1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answerBtn444"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:onClick="checkAnswer"
+                android:background="@drawable/qbuton_back"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer4" />
+
+            <Button
+                android:id="@+id/answerBtn333"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:onClick="checkAnswer"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/qbuton_back"
+                android:textColor="@color/cardview_light_background"
+                android:text="answer3" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
